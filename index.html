@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="init()">
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <span class="navbar-brand mb-0 h1">Quiz-App</span>
@@ -21,31 +21,31 @@
             <div class="card quiz-card">
                 <img src="./assets/pencil.jpg" class="card-img-top" alt="Pencil image">
                 <div class="card-body">
-                    <h5 class="card-title">Frage</h5>
+                    <h5 class="card-title" id="questiontext">Frage</h5>
 
-                    <div class="card mb-2">
+                    <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+                        <div class="card-body" id="answer_1">
+                            Antwort
+                        </div>
+                    </div>
+                    <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')" id="answer_2">
                         <div class="card-body">
                             Antwort
                         </div>
                     </div>
-                    <div class="card mb-2">
+                    <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')" id="answer_3">
                         <div class="card-body">
                             Antwort
                         </div>
                     </div>
-                    <div class="card mb-2">
-                        <div class="card-body">
-                            Antwort
-                        </div>
-                    </div>
-                    <div class="card mb-2">
+                    <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')" id="answer_4">
                         <div class="card-body">
                             Antwort.
                         </div>
                     </div>
                     <div class="quastion-footer">
                         <span>
-                            <b>1</b> von <b>5</b> Fragen
+                            <b>1</b> von <b id="all-questions">5</b> Fragen
                         </span>
                         <button class="btn btn-primary">Nächste Frage</button>
                     </div>
@@ -53,6 +53,7 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
