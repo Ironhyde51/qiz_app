@@ -193,11 +193,15 @@ function answer(selection) {
   let selectetQuestionNumber = selection.slice(-1);//letzte zeichen von selection
   console.log('selectetquestionnuimber is', selectetQuestionNumber);//nummer der ausgewählten antwort
   console.log('current question is', question['right_answer']); //richtige antwort der aktuellen frage
+
+  let idOfRightAnswer = `answer_${question['right_answer']}`;
+
   if (selectetQuestionNumber == question['right_answer']) { //vergleicht ob die ausgewählte antwort die richtige ist
     console.log('richtige antwort');//richtige antwort
     document.getElementById(selection).classList.add('bg-success');
   } else {//falsche antwort
     console.log('falsche antwort'); //falsche antwort
     document.getElementById(selection).classList.add('bg-danger');
+    document.getElementById(idOfRightAnswer).classList.add('bg-success');
   }
 }
