@@ -1,12 +1,12 @@
 let questions = [
-    {
+  {
     "question": "Wer hat HTML erfunden?",
     "answer_1": "Lady Gaga",
     "answer_2": "Einstein",
     "answer_3": "Tim Berners-Lee",
     "answer_4": "Bill Gates",
     "right_answer": 3
-    },
+  },
   {
     "question": "Was bedeutet die Abkürzung HTML?",
     "answer_1": "HyperText Markup Language",
@@ -186,3 +186,18 @@ function showQuestion() {
 
 }
 
+function answer(selection) {
+
+  let question = questions[currentQuestion];//aktuelles frage objekt
+  console.log('selectet answer is', selection);//ausgewählte antwort
+  let selectetQuestionNumber = selection.slice(-1);//letzte zeichen von selection
+  console.log('selectetquestionnuimber is', selectetQuestionNumber);//nummer der ausgewählten antwort
+  console.log('current question is', question['right_answer']); //richtige antwort der aktuellen frage
+  if (selectetQuestionNumber == question['right_answer']) { //vergleicht ob die ausgewählte antwort die richtige ist
+    console.log('richtige antwort');//richtige antwort
+    document.getElementById(selection).classList.add('bg-success');
+  } else {//falsche antwort
+    console.log('falsche antwort'); //falsche antwort
+    document.getElementById(selection).classList.add('bg-danger');
+  }
+}

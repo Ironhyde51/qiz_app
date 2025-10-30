@@ -18,7 +18,17 @@ body{
     align-items: center;
     padding-top: 12px;
 }
+
 .quiz-answer-card:hover{
     cursor: pointer;
     background-color: rgba(203, 163, 240, 0.425);
 }
+.bg-success{
+    color: antiquewhite;
+}
+.bg-danger{
+    color: antiquewhite;
+}
+/* Hinweis: Bootstrap definiert .mb-2 bereits. Vermeide globale Überschreibung.
+   Falls du einen anderen Abstand für Antwort-Karten möchtest, verwende
+   eine eigene Klasse wie .quiz-answer-card statt .mb-2. */
